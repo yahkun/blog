@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    {% include "favicon.html" %}
+    <title>注册一个新的账号</title>
+    <link href="{% static 'css/reglogin.css' %}" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .nav-bar {
+            padding: 10px;
+        }
+        #backToHome {
+            border: 1px solid black;
+            background-color: yellow;
+        }
+        #backToHome:hover{
+            background-color: #0593d3;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <span id="backToHome"><a href="/">主页</a></span>
+    </div>
+	<div class="main">
+		<div class="header" >
+			<h1>创建您的账号</h1>
+		</div>
+		<p></p>
+			<form action="{% url 'reg' %}" method="post">
+                {% csrf_token %}
+				<ul class="left-form">
+{#					<h2>新的账号:</h2>#}
+					<li>
+						{{ reg_form.username }}
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						{{ reg_form.email }}
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						{{ reg_form.url }}
+						<div class="clear"> </div>
+					</li> 
+					<li>
+                        {{ reg_form.password }}
+						<div class="clear"> </div>
+					</li>
+                    <input type="hidden" name="source_url" value="{{ request.META.HTTP_REFERER }}">
+					<input type="submit" value="注册">
+					<div class="clear"> </div>
+				</ul>
+				<div class="clear"> </div>
+			</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<nav id="topnav" class="f_r">
+    <ul>
+        <a href="/">首页</a>
+        {% for category in category_list %}
+            <a href="{% url 'category' category.ename %}">{{ category.name }}</a>
+        {% endfor %}
+    </ul>
+    <script src="{% static 'js/nav.js' %}"></script>
+</nav>

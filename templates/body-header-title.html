@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+{% block custom_css %}
+    <style>
+{#        .left-logo{#}
+{#            position: relative;#}
+{#        }#}
+{#        .right-logo{#}
+{#            position: absolute;#}
+{#            display: inline;#}
+{#            float: right;#}
+{#            border: 1px solid black;#}
+{#            margin-top: 10px;#}
+{#        }#}
+    </style>
+{% endblock %}
+
+<div class="logo">
+    <div class="left-logo">
+        <h1><a href="/">{{ SITE_NAME }}</a></h1>
+        <p>{{ SITE_DESC }}</p>
+    </div>
+{#    <div class="right-logo">#}
+{#        <span>登录 | 注册</span>#}
+{#    </div>#}
+</div>
+
