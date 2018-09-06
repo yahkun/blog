@@ -176,17 +176,17 @@ def comment_post(request):
 
 
 # 注销
-def do_logout(request):
+def signout(request):
     try:
         logout(request)
     except Exception as e:
-        print e
         logger.error(e)
     return redirect(request.META['HTTP_REFERER'])
 
 
 # 注册
-def do_reg(request):
+# TODO: 前端使用AJAX技术实现数据验证
+def signup(request):
     try:
         if request.method == 'POST':
             reg_form = RegForm(request.POST)
@@ -210,11 +210,12 @@ def do_reg(request):
             reg_form = RegForm()
     except Exception as e:
         logger.error(e)
-    return render(request, 'blog/reg.html', locals())
+    return render(request, 'blog/signup.html', locals())
 
 
 # 登录
-def do_login(request):
+# TODO: 前端使用AJAX技术实现数据验证
+def signin(request):
     try:
         if request.method == 'POST':
             login_form = LoginForm(request.POST)
@@ -236,7 +237,7 @@ def do_login(request):
             login_form = LoginForm()
     except Exception as e:
         logger.error(e)
-    return render(request, 'blog/login.html', locals())
+    return render(request, 'blog/home.html', locals())
 
 
 def category(request, category):

@@ -24,4 +24,18 @@
 <script src='//w.segmentfault.com/card/1030000011438646.js?w=0&3rd=0&bg=0&bd=DDDDDD&cl=333333&btn=009a61&noBtn=0'></script>
     </div>
     </div>
+
+ <a class="jq_btn" href="#"><div style="font-size: xx-large">Hello World!</div></a>
+    <script src="/static/js/jquery.min.js"></script>
+    <script>
+        //鼠标移上去效果
+        $(".jq_btn").hover(
+            function(){
+                $(this).find("div").stop().fadeOut();
+            },
+            function(){
+                $(this).find("div").stop().fadeIn();
+            }
+        );
+    </script>
 {% endblock %}
