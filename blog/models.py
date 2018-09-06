@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
+from DjangoUeditor.models import UEditorField
 
 # Create your models here.
 
@@ -70,7 +71,7 @@ class Article(models.Model):
     title = models.CharField(max_length=28, verbose_name='文章标题')
     en_title = models.CharField(max_length=140, null=False, verbose_name='英文标题')
     desc = models.CharField(max_length=140, verbose_name='文章描述')
-    content = models.TextField(verbose_name='文章内容')
+    content = UEditorField(u"文章正文", height=300, width=945.25, default=u'', blank=True, imagePath="uploads/blog/images/", toolbars='besttome', filePath='uploads/blog/files/')
     click_count = models.IntegerField(default=0, verbose_name='点击次数')
     is_recommend = models.BooleanField(default=False, verbose_name='是否推荐')
     date_publish = models.DateTimeField(default=timezone.now, verbose_name='发布时间')
