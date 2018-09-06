@@ -13,11 +13,11 @@ urlpatterns = [
     
     url(r'^comment/post/$', comment_post, name='comment_post'),
     
-    url(r'^logout$', do_logout, name='logout'),
+    url(r'^signout$', signout, name='logout'),
     
-    url(r'^reg', do_reg, name='reg'),
+    url(r'^signup', signup, name='reg'),
     
-    url(r'^login', do_login, name='login'),
+    url(r'^signin', signin, name='login'),
     
     url(r'^categorys/about$', about, name='about'),
     url(r'^categorys/(?P<category>\w+)$', category, name='category'),

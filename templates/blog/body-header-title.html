@@ -2,26 +2,29 @@
 
 {% block custom_css %}
     <style>
-{#        .left-logo{#}
-{#            position: relative;#}
-{#        }#}
-{#        .right-logo{#}
-{#            position: absolute;#}
-{#            display: inline;#}
-{#            float: right;#}
-{#            border: 1px solid black;#}
-{#            margin-top: 10px;#}
-{#        }#}
+        .sign-in-out {
+            display: inline;
+            float: right;
+            padding: 0;
+        }
+    .sign-in-out li {
+        font-size: large;
+    }
     </style>
 {% endblock %}
 
 <div class="logo">
     <div class="left-logo">
-        <h1><a href="/">{{ SITE_NAME }}</a></h1>
+        <div class="cloud">
+            <h1 style="display: inline;"><a href="/">{{ SITE_NAME }}</a></h1>
+                <ul class="sign-in-out">
+                    <li><a href="/admin">登录</a></li>
+                    <li><a href="/signup">注册</a></li>
+                    <li style="display: none"><a href="/">注销</a></li>
+                </ul>
+        </div>
         <p>{{ SITE_DESC }}</p>
     </div>
-{#    <div class="right-logo">#}
-{#        <span>登录 | 注册</span>#}
-{#    </div>#}
+
 </div>
 
