@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.utils import timezone
 
 # Create your models here.
 
@@ -72,7 +73,7 @@ class Article(models.Model):
     content = models.TextField(verbose_name='文章内容')
     click_count = models.IntegerField(default=0, verbose_name='点击次数')
     is_recommend = models.BooleanField(default=False, verbose_name='是否推荐')
-    date_publish = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
+    date_publish = models.DateTimeField(default=timezone.now, verbose_name='发布时间')
     user = models.ForeignKey(User, verbose_name='用户')
     category = models.ForeignKey(Category, blank=True, null=True, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')

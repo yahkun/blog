@@ -1,0 +1,165 @@
+2018-09-06 00:14:31,124 [Thread-33:140658935863040] [django.request:170] [base:get_response] [WARNING]- Not Found: /kindeditor/plugins/code/prettify.css
+2018-09-06 00:26:21,675 [Thread-39:140658935863040] [django.request:170] [base:get_response] [WARNING]- Not Found: /kindeditor/plugins/code/prettify.css
+2018-09-06 02:20:42,913 [Thread-5:139629098288896] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/2/
+Traceback (most recent call last):
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1456, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 703, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (date_publish) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2018-09-06 02:23:22,661 [Thread-3:140017906390784] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/10/
+Traceback (most recent call last):
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1456, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 703, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (date_publish) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2018-09-06 02:23:28,636 [Thread-4:140017906390784] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/9/
+Traceback (most recent call last):
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1456, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 703, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (date_publish) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2018-09-06 02:23:44,600 [Thread-9:140017906390784] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/8/
+Traceback (most recent call last):
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1456, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 703, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (date_publish) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2018-09-06 02:23:51,193 [Thread-10:140017906390784] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/10/
+Traceback (most recent call last):
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1456, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 703, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (date_publish) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2018-09-06 02:25:20,890 [Thread-2:140287943268096] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/10/
+Traceback (most recent call last):
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/utils/decorators.py", line 145, in inner
+    return func(*args, **kwargs)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1456, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/home/yahkun/workspace/envs/blog_project_venv/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 703, in get_form
+    % (e, self.__class__.__name__))
+FieldError: Unknown field(s) (date_publish) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2018-09-06 02:26:04,879 [Thread-4:140396036060928] [django.request:170] [base:get_response] [WARNING]- Not Found: /kindeditor/plugins/code/prettify.css
