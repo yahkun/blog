@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'bootstrap_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'DjangoUeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -94,9 +96,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-US'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -110,13 +112,26 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR,  'static'),
+# )
+
+# 公共的static文件
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,  'static'),
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "media"),
 )
 
-MEDIA_URL = '/uploads/'
+# MEDIA_URL = '/uploads/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
-MEDIA_ROOT = os.path.join(BASE_DIR,  'uploads')
+# upload floder
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder", )
 
 # 自定义用户model
 AUTH_USER_MODEL = 'blog.User'

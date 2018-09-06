@@ -2,14 +2,12 @@
 import logging
 import json
 
-from django.utils.encoding import smart_unicode
-from django.shortcuts import render, redirect, HttpResponse
-from django.core.urlresolvers import reverse
+from django.shortcuts import render, redirect
+# from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.hashers import make_password
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
-from django.db import connection
 from django.db.models import Count
 
 from models import *
@@ -65,7 +63,7 @@ def home(request):
     except Exception as e:
         print e
         logger.error(e)
-    return render(request, 'home.html', locals())
+    return render(request, 'blog/home.html', locals())
 
 
 # 文章归档
@@ -94,7 +92,7 @@ def archive(request):
         article_list = get_page(request, article_list)
     except Exception as e:
         logger.error(e)
-    return render(request, 'archive.html', locals())
+    return render(request, 'blog/archive.html', locals())
 
 
 # 按标签查询对应的文章列表
@@ -106,7 +104,7 @@ def tag(request, tag):
         article_list = get_page(request, article_list)
     except Exception as e:
         logger.error(e)
-    return render(request, 'home.html', locals())
+    return render(request, 'blog/home.html', locals())
 
 
 # 分页代码
@@ -130,7 +128,7 @@ def article(request, id):
             article = Article.objects.get(pk=id)
         except Article.DoesNotExist:
             context = {'reason': '没有找到对应的文章'}
-            return render(request, 'failure.html', context)
+            return render(request, 'blog/failure.html', context)
 
         # 评论表单
         comment_form = CommentForm({
@@ -152,7 +150,7 @@ def article(request, id):
                 comment_list.append(comment)
     except Exception as e:
         logger.error(e)
-    return render(request, 'article.html', locals())
+    return render(request, 'blog/article.html', locals())
 
 
 # 提交评论
@@ -171,7 +169,7 @@ def comment_post(request):
             )
             comment.save()
         else:
-            return render(request, 'failure.html', {'reason': comment_form.errors})
+            return render(request, 'blog/failure.html', {'reason': comment_form.errors})
     except Exception as e:
         logger.error(e)
     return redirect(request.META['HTTP_REFERER'])
@@ -207,12 +205,12 @@ def do_reg(request):
                 login(request, user)
                 return redirect(request.POST.get('source_url'))
             else:
-                return render(request, 'failure.html', {'reason': reg_form.errors})
+                return render(request, 'blog/failure.html', {'reason': reg_form.errors})
         else:
             reg_form = RegForm()
     except Exception as e:
         logger.error(e)
-    return render(request, 'reg.html', locals())
+    return render(request, 'blog/reg.html', locals())
 
 
 # 登录
@@ -230,15 +228,15 @@ def do_login(request):
                     # 指定默认的登录验证方式
                     login(request, user)
                 else:
-                    return render(request, 'failure.html', {'reason': '登录验证失败'})
+                    return render(request, 'blog/failure.html', {'reason': '登录验证失败'})
                 return redirect(request.POST.get('source_url'))
             else:
-                return render(request, 'failure.html', {'reason': login_form.errors})
+                return render(request, 'blog/failure.html', {'reason': login_form.errors})
         else:
             login_form = LoginForm()
     except Exception as e:
         logger.error(e)
-    return render(request, 'login.html', locals())
+    return render(request, 'blog/login.html', locals())
 
 
 def category(request, category):
@@ -248,13 +246,13 @@ def category(request, category):
         try:
             category = Category.objects.get(ename=category)
         except Category.DoesNotExist:
-            return render(request, 'failure.html', {'reason': '分类不存在'})
+            return render(request, 'blog/failure.html', {'reason': '分类不存在'})
         article_list = Article.objects.filter(category=category)
         article_list = get_page(request, article_list)
     except Exception as e:
         logger.error(e)
-    return render(request, 'category.html', locals())
+    return render(request, 'blog/category.html', locals())
 
 
 def about(request):
-    return render(request, 'about.html', locals())
+    return render(request, 'blog/about.html', locals())

@@ -18,11 +18,12 @@ a:hover { text-decoration: none; }
 header { width: 1000px; margin: 20px auto; overflow: hidden; clear: both; }
 #topnav { width: 100%; background: #0593d3; height: 46px; line-height: 46px; text-align: left; border-radius: 46px; }
 #topnav ul{ margin-left:50px; }
-#topnav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; padding: 0 20px; }
+#topnav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; margin: 0 -4px;  padding: 0 51px;}
 #topnav a:hover { background: #fff; color: #000; }
 #topnav a { color: #FFF }
 #topnav_current { background: #F3FF41; }/* 高亮选中颜色 */
 a#topnav_current { color: #000 }
+/*#home {margin: 0}*/
 article { width: 1000px; margin: 20px auto; }
 .hide {
 	display: none;
@@ -285,4 +286,25 @@ input#submit {
 
 .links ul {
 	margin-bottom: 0;
+}
+
+.fb-text {
+	color: white;
+	font-family: 'Courier New', monospace;
+}
+.footer-bottom a:link {
+	color: white;
+	font-size: medium;
+	font-family: 'Courier New', monospace;
+	padding: 3px 3px 0;
+}
+.footer-bottom a:hover {
+	color: rgb(61, 146, 201);
+	padding: 3px 3px 0;
+}
+.delimeter {
+	padding: 12px 10px 1px;
+	margin-left: 12px;
+	border-left: 2px solid white;
+	font-size: 0;
 }
